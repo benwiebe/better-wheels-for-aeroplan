@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Better Wheels for Aeroplan",
+  "version": "0.0.1",
+
+  "description": "Adds better status tracking wheels for Aeroplan",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.aircanada.com/aeroplan/member/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.aircanada.com/aeroplan/member/*",
+    "https://akamai-gw.dbaas.aircanada.com/loyalty/*"
+  ]
+}
